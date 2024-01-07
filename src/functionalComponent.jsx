@@ -1,28 +1,20 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Count() {
-    const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
-    const incrementCount = () => {
-        setCount(count + 1);
-    };
+  useEffect(() => {
+    document.title = `Clicked ${count} times`;
+  }, [count]);
 
-    const decrementCount = () => {
-        setCount(count - 1);
-    };
-
-    const resetCount = () => {
-        setCount(0);
-    };
-
-    return (
-        <div>
-            <p>Count: {count}</p>
-            <button onClick={incrementCount}>Increment</button>
-            <button style={{margin:"0rem 0.4rem"}} onClick={decrementCount}>Decrement</button>
-            <button onClick={resetCount}>Reset</button>
-        </div>
-    );
+  return (
+    <div>
+      <p>You clicked functional component <strong>{count}  </strong> times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
 }
 
 export default Count;
