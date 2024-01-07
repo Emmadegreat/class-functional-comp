@@ -8,22 +8,28 @@ class ExampleClassComponent extends Component {
     };
   }
 
-  componentDidMount() {
-    document.title = `Clicked ${this.state.count} times`;
-  }
+  incrementCount = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
 
-  componentDidUpdate() {
-    document.title = `Clicked ${this.state.count} times`;
-  }
+  decrementCount = () => {
+    this.setState({ count: this.state.count - 1 });
+  };
+
+  resetCount = () => {
+    this.setState({ count: 0 });
+  };
+
 
   render() {
     return (
       <div>
-        <p>You clicked class component {this.state.count} times</p>
-        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
-          Click me
-        </button>
+        <p>Count: {this.state.count}</p>
+        <button onClick={this.incrementCount}>Increment</button>
+        <button onClick={this.decrementCount}>Decrement</button>
+        <button onClick={this.resetCount}>Reset</button>
       </div>
+
     );
   }
 }

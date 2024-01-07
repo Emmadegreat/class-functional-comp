@@ -9,7 +9,11 @@ function App() {
     <>
       <div>
         <h2>changing react class component to functional component</h2>
-        <ExampleClassComponen/>
+        <p>class componet</p>
+
+        <ExampleClassComponen />
+
+        <p>functional component</p>
         <Count /><br />
       </div>
 
