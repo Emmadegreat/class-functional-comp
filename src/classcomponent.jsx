@@ -26,7 +26,7 @@ class ExampleClassComponent extends Component {
       <div>
         <p>Count: {this.state.count}</p>
         <button onClick={this.incrementCount}>Increment</button>
-        <button onClick={this.decrementCount}>Decrement</button>
+        <button style={{margin:"0rem 0.4rem"}} onClick={this.decrementCount}>Decrement</button>
         <button onClick={this.resetCount}>Reset</button>
       </div>
 

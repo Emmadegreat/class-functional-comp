@@ -19,7 +19,7 @@ function Count() {
         <div>
             <p>Count: {count}</p>
             <button onClick={incrementCount}>Increment</button>
-            <button onClick={decrementCount}>Decrement</button>
+            <button style={{margin:"0rem 0.4rem"}} onClick={decrementCount}>Decrement</button>
             <button onClick={resetCount}>Reset</button>
         </div>
     );
